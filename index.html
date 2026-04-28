@@ -54,7 +54,7 @@
 #ButtonTiksov   { width: 34.67%; top: 66%; right: 10%; }
 #ButtonEimon    { width: 34.67%; top: 83%; left: 50%; transform: translateX(-50%); }
 
-#ButtonContinue { width: 53.33%; top: 92%; left: 50%; transform: translateX(-50%); }
+
 #ButtonMedamot  { width: 26.67%; top: 88%; left:55%; }
 #ButtonHamer    { width: 26.67%; top:88%; left:20%; }
 
@@ -341,63 +341,104 @@ changeImage()
         }
 // תפריט
         function changeYadmat() {
-            
             hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-01.png')";
               updatePageState(true, "780px"); 
-            document.getElementById('ButtonContinue').style.display = "block";
+            document.getElementById('ButtonHazor').style.display = "block";
             document.getElementById('ButtonMedamot').style.display = "block";
             document.getElementById('ButtonHamer').style.display = "block";
-        }
+               ButtonHazor.onclick = function() { 
+                 hideAll();
+            document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
+            
+            // הגדרת גובה גלילה - התמונה תימתח בדיוק לפה
+            updatePageState(true, "1000px"); 
+ document.getElementById('ButtonHazor').style.display = "None";
+            const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
+                          'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
+            menu.forEach(id => document.getElementById(id).style.display = "block");
+
+  document.getElementById('ButtonHazor').style.display = "block";
+             // חזור לעמוד הקודם
+                       ButtonHazor.onclick = function() {   
+                              hideAll();
+            document.body.style.backgroundImage ="url('assets/עמוד חזון מלי.png')";
+            document.getElementById('NEXTButton').style.display = "block";
+             updatePageState(false);
+            }}   } 
         
        function changeMedamot() {
           
             hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-02.png')";
-
             updatePageState(false);
-             document.getElementById('ButtonContinue').style.display = "block";
-            document.getElementById('ButtonContinue').style.display = "block";
              document.getElementById('ButtonMedamot').style.display = "none";
             document.getElementById('ButtonHamer').style.display = "none";
              document.getElementById('ButtonHazor').style.display = "block";
-
-
             // חזור לעמוד הקודם
                        ButtonHazor.onclick = function() {   
                               hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-01.png')";
               updatePageState(true, "780px"); 
-            document.getElementById('ButtonContinue').style.display = "block";
+               document.getElementById('ButtonHazor').style.display = "block";
             document.getElementById('ButtonMedamot').style.display = "block";
             document.getElementById('ButtonHamer').style.display = "block";
-            }
-     
-                      
-        }
+
+             ButtonHazor.onclick = function() { 
+                 hideAll();
+            document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
+            
+            // הגדרת גובה גלילה - התמונה תימתח בדיוק לפה
+            updatePageState(true, "1000px"); 
+ document.getElementById('ButtonHazor').style.display = "None";
+            const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
+                          'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
+            menu.forEach(id => document.getElementById(id).style.display = "block");
+
+  document.getElementById('ButtonHazor').style.display = "block";
+             // חזור לעמוד הקודם
+                       ButtonHazor.onclick = function() {   
+                              hideAll();
+            document.body.style.backgroundImage ="url('assets/עמוד חזון מלי.png')";
+            document.getElementById('NEXTButton').style.display = "block";
+             updatePageState(false);
+            }}   } }
 
         function changeHamer() {
-            
             hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-03.png')";
              updatePageState(true, "785px"); 
-            document.getElementById('ButtonContinue').style.display = "block";
              document.getElementById('ButtonMedamot').style.display = "none";
             document.getElementById('ButtonHamer').style.display = "none";
                         document.getElementById('ButtonHazor').style.display = "block";
-
-                            // חזור לעמוד הקודם
-                       
-                        document.getElementById('ButtonHazor').addEventListener("click",function(){
+  // חזור לעמוד הקודם
+                       ButtonHazor.onclick = function() {   
                               hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-01.png')";
               updatePageState(true, "780px"); 
-            document.getElementById('ButtonContinue').style.display = "block";
+               document.getElementById('ButtonHazor').style.display = "block";
+
             document.getElementById('ButtonMedamot').style.display = "block";
             document.getElementById('ButtonHamer').style.display = "block";
 
-                        })
-        }
+             ButtonHazor.onclick = function() { 
+                 hideAll();
+            document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
+            // הגדרת גובה גלילה - התמונה תימתח בדיוק לפה
+            updatePageState(true, "1000px"); 
+ document.getElementById('ButtonHazor').style.display = "None";
+            const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
+                          'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
+            menu.forEach(id => document.getElementById(id).style.display = "block");
+
+  document.getElementById('ButtonHazor').style.display = "block";
+             // חזור לעמוד הקודם
+                       ButtonHazor.onclick = function() {   
+                              hideAll();
+            document.body.style.backgroundImage ="url('assets/עמוד חזון מלי.png')";
+            document.getElementById('NEXTButton').style.display = "block";
+             updatePageState(false);
+            }}   } }
 
 
           function changeMahal() {
@@ -6274,8 +6315,7 @@ function changeHistlamatHapalatAsPom() {
         <img id="ButtonHes" class="abs-btn" src="assets/כפתור תפריט שטחי אש.png" onclick="changeHes()">
         <img id="ButtonTiksov" class="abs-btn" src="assets/כפתור תפריט תקשוב.png" onclick="changeTiksov()">
         <img id="ButtonEimon" class="abs-btn" src="assets/כפתור תפריט מעטפת אימון.png" onclick="changeEimon()">
-        <img id="ButtonContinue" class="abs-btn" src="assets/להמשך לקטלוג-01.png" onclick="changeImage()">
-<!-- ידמט -->
+  <!-- ידמט -->
         <img id="ButtonMedamot" class="abs-btn" src="assets/מדמות אויב-01.png" onclick="changeMedamot()">
         <img id="ButtonHamer" class="abs-btn" src="assets/מפעילות האמר קרבי-01.png" onclick="changeHamer()">
 <!-- מאל -->
