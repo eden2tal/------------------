@@ -43,8 +43,19 @@
         /* מיקומים (לפי הקוד שלך) */
   #NEXTButton { width: 50%; top: 90%; left: 50%; transform: translateX(-50%); }
 
+#ButtonZfoni  { width: 34.67%; top: 15%; left: 10%;   }
+  #ButtonDeromi { width: 34.67%; top: 15%; right: 10%;  }
+  #ButtonMahal  { width: 34.67%; top: 32%; left: 10%;  }
+ #ButtonMaharas { width: 34.67%; top: 32%; right: 10%;   }
+  #ButtonTiksov { width: 34.67%; top: 49%; left: 10%;   }
+ #ButtonYadmat  { width: 34.67%; top: 49%; right: 10%;  }
+#ButtonHes      { width: 34.67%; top: 66%; left: 10%;   }
+ #ButtonZhav    { width: 34.67%; top: 66%; right: 10%;  }
+#ButtonEimon    { width: 34.67%; top: 83%; left: 50%; transform: translateX(-50%);    }
+
+
 /* תפריט ראשי */
-#ButtonYadmat   { width: 34.67%; top: 15%; left: 10%; }
+/* #ButtonYadmat   { width: 34.67%; top: 15%; left: 10%; }
 #ButtonMahal    { width: 34.67%; top: 15%; right: 10%; }
 #ButtonMaharas  { width: 34.67%; top: 32%; right: 10%; }
 #ButtonDeromi   { width: 34.67%; top: 32%; left: 10%; }
@@ -52,7 +63,7 @@
 #ButtonZhav     { width: 34.67%; top: 49%; right: 10%; }
 #ButtonHes      { width: 34.67%; top: 66%; left: 10%; }
 #ButtonTiksov   { width: 34.67%; top: 66%; right: 10%; }
-#ButtonEimon    { width: 34.67%; top: 83%; left: 50%; transform: translateX(-50%); }
+#ButtonEimon    { width: 34.67%; top: 83%; left: 50%; transform: translateX(-50%); } */
 
 
 #ButtonMedamot  { width: 26.67%; top: 88%; left:55%; }
@@ -125,9 +136,9 @@
 #ButtonSogiEimonim,
 #ButtonMaevarKatalog { width: 80%; left: 50%; transform: translateX(-50%); top: 80%; }
 
-#ButtonAnapMikchoot { width: 80%; top:25%; left: 50%; transform: translateX(-50%); }
-#ButtonAnapSiryon { width: 80%; top: 37%; left: 50%; transform: translateX(-50%); }
-#ButtoKlali { width: 80%; top:49%; left: 50%; transform: translateX(-50%); }
+#ButtonAnapMikchoot { width: 80%; top:37%; left: 50%; transform: translateX(-50%); }
+#ButtonAnapSiryon { width: 80%; top: 49%; left: 50%; transform: translateX(-50%); }
+#ButtoKlali { width: 80%; top:25%; left: 50%; transform: translateX(-50%); }
 #ButtonAnapHandasa { width: 80%; top:62%; left: 50%; transform: translateX(-50%); }
 
 /* שריון */
@@ -299,18 +310,25 @@
          max-height: 1110px;
 
         }
+
+
+
+#ButtonMedamot  { width: 26.67%; top: 90%; left:55%; }
+#ButtonHamer    { width: 26.67%; top:90%; left:20%; }
+
 #ButtonMahleketTiksov { width: 33.33%; top: 105%; left:52%; }
 #ButtonTastiyot       { width: 33.33%; top:105%; left:15%; }
 
          #NEXTButton { width: 50%; top: 93%; left: 50%; transform: translateX(-50%); }
-  #ButtonYadmat   { width: 34.67%; top: 15%; left: 10%;   }
-#ButtonMahal    { width: 34.67%; top: 15%; right: 10%;  }
-#ButtonMaharas  { width: 34.67%; top: 35%; right: 10%;  }
-#ButtonDeromi   { width: 34.67%; top: 35%; left: 10%;   }
-#ButtonZfoni    { width: 34.67%; top: 55%; left: 10%;   }
-#ButtonZhav     { width: 34.67%; top: 55%; right: 10%;  }
+
+  #ButtonZfoni  { width: 34.67%; top: 15%; left: 10%;   }
+  #ButtonDeromi { width: 34.67%; top: 15%; right: 10%;  }
+  #ButtonMahal  { width: 34.67%; top: 35%; left: 10%;  }
+ #ButtonMaharas { width: 34.67%; top: 35%; right: 10%;   }
+  #ButtonTiksov { width: 34.67%; top: 55%; left: 10%;   }
+ #ButtonYadmat  { width: 34.67%; top: 55%; right: 10%;  }
 #ButtonHes      { width: 34.67%; top: 75%; left: 10%;   }
-#ButtonTiksov   { width: 34.67%; top: 75%; right: 10%;  }
+ #ButtonZhav    { width: 34.67%; top: 75%; right: 10%;  }
 #ButtonEimon    { width: 34.67%; top: 95%; left: 50%; transform: translateX(-50%);    }
 }
 
@@ -377,7 +395,7 @@ changeImage()
         function changeYadmat() {
             hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-01.png')";
-              updatePageState(true, "780px"); 
+              updatePageState(true, "1001px"); 
             document.getElementById('ButtonHazor').style.display = "block";
             document.getElementById('ButtonMedamot').style.display = "block";
             document.getElementById('ButtonHamer').style.display = "block";
@@ -441,7 +459,7 @@ changeImage()
         function changeHamer() {
             hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-03.png')";
-             updatePageState(true, "785px"); 
+             updatePageState(true, "1000px"); 
              document.getElementById('ButtonMedamot').style.display = "none";
             document.getElementById('ButtonHamer').style.display = "none";
                         document.getElementById('ButtonHazor').style.display = "block";
@@ -449,7 +467,7 @@ changeImage()
                        ButtonHazor.onclick = function() {   
                               hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-01.png')";
-              updatePageState(true, "780px"); 
+          updatePageState(true, "1001px"); 
                document.getElementById('ButtonHazor').style.display = "block";
 
             document.getElementById('ButtonMedamot').style.display = "block";
