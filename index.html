@@ -17,7 +17,7 @@
         body {
             /* השינוי הקריטי כאן: 100% 100% גורם לתמונה להימתח לכל אורך הגלילה */
             background-image: url('assets/עמוד פתיחה 2026.png');
-            background-size:  100%; 
+            background-size:  cover; 
             background-position: top center;
             background-repeat: no-repeat;
             background-attachment: scroll; 
@@ -41,7 +41,7 @@
         }
 
         /* מיקומים (לפי הקוד שלך) */
-  #NEXTButton { width: 50%; top: 80%; left: 50%; transform: translateX(-50%); }
+  #NEXTButton { width: 50%; top: 90%; left: 50%; transform: translateX(-50%); }
 
 /* תפריט ראשי */
 #ButtonYadmat   { width: 34.67%; top: 15%; left: 10%; }
@@ -280,7 +280,41 @@
 #ButtonEimonMekinZfoni { top:55%; }
 #ButtonTarpal { top:65%; }
 #ButtonTargad { top:75%; }
-          
+
+
+/* מובייל קטן */
+@media (max-width: 480px) {
+  
+  
+}
+
+/* מובייל רגיל */
+@media (min-width: 390px ) {
+     body{
+ height: 100vh;
+ background-size:cover;
+
+     }
+        .page-wrapper {
+         max-height: 1110px;
+
+        }
+#ButtonMahleketTiksov { width: 33.33%; top: 105%; left:52%; }
+#ButtonTastiyot       { width: 33.33%; top:105%; left:15%; }
+
+         #NEXTButton { width: 50%; top: 93%; left: 50%; transform: translateX(-50%); }
+  #ButtonYadmat   { width: 34.67%; top: 15%; left: 10%;   }
+#ButtonMahal    { width: 34.67%; top: 15%; right: 10%;  }
+#ButtonMaharas  { width: 34.67%; top: 35%; right: 10%;  }
+#ButtonDeromi   { width: 34.67%; top: 35%; left: 10%;   }
+#ButtonZfoni    { width: 34.67%; top: 55%; left: 10%;   }
+#ButtonZhav     { width: 34.67%; top: 55%; right: 10%;  }
+#ButtonHes      { width: 34.67%; top: 75%; left: 10%;   }
+#ButtonTiksov   { width: 34.67%; top: 75%; right: 10%;  }
+#ButtonEimon    { width: 34.67%; top: 95%; left: 50%; transform: translateX(-50%);    }
+}
+
+        
     </style>  
                      
     <script>
@@ -320,10 +354,10 @@ changeImage()
 
         function changeImage() {
             hideAll();
-            document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            
+          document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
+           
             // הגדרת גובה גלילה - התמונה תימתח בדיוק לפה
-            updatePageState(true, "1000px"); 
+            updatePageState(true, "1310px"); 
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -352,13 +386,13 @@ changeImage()
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
             
             // הגדרת גובה גלילה - התמונה תימתח בדיוק לפה
-            updatePageState(true, "1000px"); 
- document.getElementById('ButtonHazor').style.display = "None";
+             updatePageState(true, "1310px");
+            document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
             menu.forEach(id => document.getElementById(id).style.display = "block");
 
-  document.getElementById('ButtonHazor').style.display = "block";
+            document.getElementById('ButtonHazor').style.display = "block";
              // חזור לעמוד הקודם
                        ButtonHazor.onclick = function() {   
                               hideAll();
@@ -379,7 +413,7 @@ changeImage()
                        ButtonHazor.onclick = function() {   
                               hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג ידמט-01.png')";
-              updatePageState(true, "780px"); 
+              updatePageState(true, "1001px"); 
                document.getElementById('ButtonHazor').style.display = "block";
             document.getElementById('ButtonMedamot').style.display = "block";
             document.getElementById('ButtonHamer').style.display = "block";
@@ -389,7 +423,7 @@ changeImage()
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
             
             // הגדרת גובה גלילה - התמונה תימתח בדיוק לפה
-            updatePageState(true, "1000px"); 
+         updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -425,7 +459,7 @@ changeImage()
                  hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
             // הגדרת גובה גלילה - התמונה תימתח בדיוק לפה
-            updatePageState(true, "1000px"); 
+            updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -454,7 +488,7 @@ changeImage()
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+             updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -501,7 +535,7 @@ changeImage()
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+            updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -551,7 +585,7 @@ changeImage()
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -600,7 +634,7 @@ changeImage()
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+            updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -649,7 +683,7 @@ changeImage()
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -697,7 +731,7 @@ changeImage()
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+            updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -745,7 +779,7 @@ changeImage()
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -792,7 +826,7 @@ changeImage()
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -835,7 +869,7 @@ function changeHativa  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+          updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -873,7 +907,7 @@ function changeOgda  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+             updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -925,7 +959,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+            updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -982,7 +1016,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+            updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1028,7 +1062,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+         updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1074,7 +1108,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+            updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1120,7 +1154,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1165,7 +1199,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1211,7 +1245,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1229,7 +1263,7 @@ function changeYasar  () {
            hideAll();
                    document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1237,7 +1271,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1271,7 +1305,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1279,7 +1313,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1312,7 +1346,7 @@ function changeYasar  () {
                          hideAll();
                     document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1320,7 +1354,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1358,7 +1392,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1366,7 +1400,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1403,7 +1437,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1411,7 +1445,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1448,7 +1482,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1456,7 +1490,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1494,7 +1528,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1502,7 +1536,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1539,7 +1573,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1547,7 +1581,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1592,7 +1626,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1600,7 +1634,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1638,7 +1672,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1646,7 +1680,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1685,7 +1719,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1693,7 +1727,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1731,7 +1765,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1739,7 +1773,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1777,7 +1811,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1785,7 +1819,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1823,7 +1857,7 @@ function changeYasar  () {
                          hideAll();
         document.body.style.backgroundImage = "url('assets/תקשוב מדור אימונים והדרכה רקע.png')";
 
-               updatePageState(true, "1000px"); 
+              updatePageState(true, "1310px");
             document.getElementById('ButtonMahleketTiksov').style.display = "block";
             document.getElementById('ButtonTastiyot').style.display = "block";
             document.getElementById('ButtonHazor').style.display = "block";
@@ -1831,7 +1865,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1868,7 +1902,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1911,7 +1945,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1952,7 +1986,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -1993,7 +2027,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2034,7 +2068,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2075,7 +2109,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2119,7 +2153,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2163,7 +2197,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2206,7 +2240,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2249,7 +2283,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2292,7 +2326,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2336,7 +2370,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2366,7 +2400,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2403,7 +2437,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2438,7 +2472,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2474,7 +2508,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2510,7 +2544,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2531,7 +2565,7 @@ function changeYasar  () {
             function changeZhav() {
            hideAll();
             document.body.style.backgroundImage = "url('assets/שביל הזהב רקע.png')";
-                 updatePageState(true, "750px"); 
+                 updatePageState(false); 
             document.getElementById('ButtonHazor').style.display = "block";
 
 
@@ -2539,7 +2573,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2565,7 +2599,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2598,7 +2632,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2641,7 +2675,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2698,7 +2732,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2759,7 +2793,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2820,7 +2854,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2884,7 +2918,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -2948,7 +2982,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3008,7 +3042,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3068,7 +3102,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3128,7 +3162,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3185,7 +3219,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3247,7 +3281,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3309,7 +3343,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3371,7 +3405,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3433,7 +3467,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3496,7 +3530,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3559,7 +3593,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3621,7 +3655,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3682,7 +3716,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3744,7 +3778,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3806,7 +3840,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3861,7 +3895,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3924,7 +3958,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -3996,7 +4030,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4056,7 +4090,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4129,7 +4163,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4196,7 +4230,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4279,7 +4313,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4305,7 +4339,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4340,7 +4374,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4395,7 +4429,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4453,7 +4487,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4512,7 +4546,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4570,7 +4604,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4629,7 +4663,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4688,7 +4722,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4747,7 +4781,7 @@ function changeYasar  () {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4805,7 +4839,7 @@ function changeEimonKshaim() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4864,7 +4898,7 @@ function changeEimonSmiratCsirotMepakdim() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4924,7 +4958,7 @@ function changeEimonSmiratCsirotNaid() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -4982,7 +5016,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5042,7 +5076,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5100,7 +5134,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5147,7 +5181,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5199,7 +5233,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5252,7 +5286,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5304,7 +5338,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5356,7 +5390,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5408,7 +5442,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5461,7 +5495,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5504,7 +5538,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5554,7 +5588,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5604,7 +5638,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5652,7 +5686,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5704,7 +5738,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5756,7 +5790,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5808,7 +5842,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5861,7 +5895,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5906,7 +5940,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -5955,7 +5989,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6004,7 +6038,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6052,7 +6086,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6083,7 +6117,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6119,7 +6153,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6155,7 +6189,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6172,7 +6206,7 @@ function changeHistlamatHapalatAsPom() {
                function changeEimonMepakdim() {
                       hideAll();
             document.body.style.backgroundImage = "url('assets/אימון מפקדים צפוני רקע.png')";
-             updatePageState(true, "1000px");   
+            updatePageState(true, "1310px");  
             document.getElementById('ButtonHazor').style.display = "block";
 
                        ButtonHazor.onclick = function() {   
@@ -6191,7 +6225,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6229,7 +6263,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6265,7 +6299,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6300,7 +6334,7 @@ function changeHistlamatHapalatAsPom() {
              ButtonHazor.onclick = function() {   
                        hideAll();
             document.body.style.backgroundImage = "url('assets/קטלוג האימונים אפליקציה-03.png')";
-            updatePageState(true, "1000px"); 
+           updatePageState(true, "1310px");
  document.getElementById('ButtonHazor').style.display = "None";
             const menu = ['ButtonYadmat', 'ButtonMahal', 'ButtonMaharas', 'ButtonDeromi', 
                           'ButtonZfoni', 'ButtonZhav', 'ButtonHes', 'ButtonTiksov', 'ButtonEimon'];
@@ -6342,15 +6376,19 @@ function changeHistlamatHapalatAsPom() {
           <!-- דרג גדוד -->
          <img id="ButtonMaclolMenala" class="abs-btn" src="assets/כפתור מכלול מנהלה.png" onclick="changeMaclolMenala()">
         <img id="ButtonTene" class="abs-btn" src="assets/כפתור פלגת טנא.png" onclick="changeTene()">
-         <img id="ButtonHaspaka" class="abs-btn" src="assets/כפתור פלגת הספקה.png" onclick="changeHaspaka()">
-        <img id="ButtonPlasim" class="abs-btn" src="assets/כפתור פלסים.png" onclick="changePlasim()">
+         <img id="ButtonHaspaka" class="abs-btn" src="assets/כפתור פלגת הספקה.png">
+          <!-- onclick="changeHaspaka()" -->
+        <img id="ButtonPlasim" class="abs-btn" src="assets/כפתור פלסים.png" >
+        <!-- onclick="changePlasim()" -->
         <img id="ButtonMasan" class="abs-btn" src="assets/כפתור מחלקת משאן.png" onclick="changeMasan()">
         <img id="ButtonRepoa" class="abs-btn" src="assets/כפתור פלגת רפואה.png" onclick="changeRepoa()">
         <!-- דרג חטיבה -->
           <img id="Buttongadsam" class="abs-btn" src="assets/גדסם.png" onclick="changeGadsam()">
-          <img id="ButtonMaclolMivchim" class="abs-btn" src="assets/מכלול מבצעים גדסם.png" onclick="changeMaclolMivchim()">
+          <img id="ButtonMaclolMivchim" class="abs-btn" src="assets/מכלול מבצעים גדסם.png" >
+          <!-- onclick="changeMaclolMivchim()" -->
           <img id="ButtonSinoa" class="abs-btn" src="assets/פלוגת שינוע.png" onclick="changeSinoa()">
-          <img id="ButtonPtan" class="abs-btn" src="assets/פתן.png" onclick="changePtan()">
+          <img id="ButtonPtan" class="abs-btn" src="assets/פתן.png">
+           <!-- onclick="changePtan()" -->
           <img id="ButtonPlahak" class="abs-btn" src="assets/פלהק פלכר.png" onclick="changePlahak()">
           <img id="ButtonTeneGadsam" class="abs-btn" src="assets/פלגת טנא גדסם כפתור.png" onclick="changeTeneGadsam()">
 <!-- מרכז צפוני  --> 
@@ -6466,5 +6504,8 @@ function changeHistlamatHapalatAsPom() {
     <img id="ButtonEimonCevetPaltach" class="abs-btn" src="assets/אימון הקמת צוות פלתצ כפתור.png" onclick="changeEimonCevetPaltach()">
   <img id="ButtonEimonPaltacMecin" class="abs-btn" src="assets/אימון פלתצ מכין כפתור.png" onclick="changeEimonPaltacMecin()">
   <img id="ButtonBuchanRama" class="abs-btn" src="assets/בוחן רמה כפתור.png" onclick="changeBuchanRama()">
+
+
+
      </div>
 </html>
