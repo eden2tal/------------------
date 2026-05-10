@@ -15,7 +15,7 @@
         }
 
         body {
-            /* השינוי הקריטי כאן: 100% 100% גורם לתמונה להימתח לכל אורך הגלילה */
+               /* השינוי הקריטי כאן: 100% 100% גורם לתמונה להימתח לכל אורך הגלילה */
             background-image: url('assets/עמוד פתיחה 2026.png');
             background-size:  cover; 
             background-position: top center;
@@ -52,19 +52,6 @@
 #ButtonHes      { width: 34.67%; top: 66%; left: 10%;   }
  #ButtonZhav    { width: 34.67%; top: 66%; right: 10%;  }
 #ButtonEimon    { width: 34.67%; top: 83%; left: 50%; transform: translateX(-50%);    }
-
-
-/* תפריט ראשי */
-/* #ButtonYadmat   { width: 34.67%; top: 15%; left: 10%; }
-#ButtonMahal    { width: 34.67%; top: 15%; right: 10%; }
-#ButtonMaharas  { width: 34.67%; top: 32%; right: 10%; }
-#ButtonDeromi   { width: 34.67%; top: 32%; left: 10%; }
-#ButtonZfoni    { width: 34.67%; top: 49%; left: 10%; }
-#ButtonZhav     { width: 34.67%; top: 49%; right: 10%; }
-#ButtonHes      { width: 34.67%; top: 66%; left: 10%; }
-#ButtonTiksov   { width: 34.67%; top: 66%; right: 10%; }
-#ButtonEimon    { width: 34.67%; top: 83%; left: 50%; transform: translateX(-50%); } */
-
 
 #ButtonMedamot  { width: 26.67%; top: 88%; left:55%; }
 #ButtonHamer    { width: 26.67%; top:88%; left:20%; }
@@ -297,13 +284,46 @@
 
 
 /* מובייל קטן */
-@media (max-width: 480px) {
-  
-  
+@media (max-width: 394px) {
+      body{
+height: 100vh;
+width: 100vw;
+ background-size:contain;
+     }
+     /* .screen{
+          position: relative;
+          width: 100%;
+          
+     }
+     .openPage{
+          width: 100%;
+          display:flex;
+          opacity: 0;
+     } */
+  #ButtonHazor    { width: 10.67%; top: 3%; right: 8%; }
+  #ButtonHome    { width: 10.67%; top: 3%; right: 20%; }
+
+  #ButtonMedamot  { width: 26.67%; top: 75%; left:55%; }
+#ButtonHamer    { width: 26.67%; top:75%; left:20%; }
+
+#ButtonMahleketTiksov { width: 33.33%; top: 90%; left:52%; }
+#ButtonTastiyot       { width: 33.33%; top:90%; left:15%; }
+
+         #NEXTButton { width: 50%; top: 90%; left: 50%; transform: translateX(-50%); }
+
+  #ButtonZfoni  { width: 34.67%; top: 10%; left: 10%;   }
+  #ButtonDeromi { width: 34.67%; top: 10%; right: 10%;  }
+  #ButtonMahal  { width: 34.67%; top: 25%; left: 10%;  }
+ #ButtonMaharas { width: 34.67%; top: 25%; right: 10%;   }
+  #ButtonTiksov { width: 34.67%; top: 40%; left: 10%;   }
+ #ButtonYadmat  { width: 34.67%; top: 40%; right: 10%;  }
+#ButtonHes      { width: 34.67%; top: 55%; left: 10%;   }
+ #ButtonZhav    { width: 34.67%; top: 55%; right: 10%;  }
+#ButtonEimon    { width: 34.67%; top: 70%; left: 50%; transform: translateX(-50%);    }
 }
 
 /* מובייל רגיל */
-@media (min-width: 390px ) {
+@media (min-width: 395px ) {
      body{
  height: 100vh;
  background-size:cover;
@@ -6710,7 +6730,7 @@ function changeHistlamatHapalatAsPom() {
   <img id="ButtonEimonPaltacMecin" class="abs-btn" src="assets/אימון פלתצ מכין כפתור.png" onclick="changeEimonPaltacMecin()">
   <img id="ButtonBuchanRama" class="abs-btn" src="assets/בוחן רמה כפתור.png" onclick="changeBuchanRama()">
 
-
+ </div>
 
      </div>
 </html>
