@@ -356,6 +356,8 @@ width: 100vw;
                      
     <script>
 
+
+
  
 function GoHome(){
   hideAll();
@@ -369,6 +371,7 @@ function GoHome(){
             menu.forEach(id => document.getElementById(id).style.display = "block");
 
   document.getElementById('ButtonHazor').style.display = "block";
+  
              // חזור לעמוד הקודם
                        ButtonHazor.onclick = function() {   
                               hideAll();
@@ -454,6 +457,7 @@ changeImage()
               updatePageState(true, "1001px"); 
             document.getElementById('ButtonHazor').style.display = "block";
               document.getElementById('ButtonHome').style.display = "block";
+              
             document.getElementById('ButtonMedamot').style.display = "block";
             document.getElementById('ButtonHamer').style.display = "block";
                ButtonHazor.onclick = function() { 
@@ -6592,8 +6596,15 @@ function changeHistlamatHapalatAsPom() {
          <img id="ButtonGdod" class="abs-btn" src="assets/כפתור דרג הגדוד.png" onclick="changeGdod()">
         <img id="ButtonHativa" class="abs-btn" src="assets/כפתור דרג החטיבה.png" onclick="changeHativa()">
         <img id="ButtonOgda" class="abs-btn" src="assets/דרג האוגדה כפתור.png" onclick="changeOgda()">
+
+
                <img id="ButtonHazor" class="abs-btn" src="assets/חץ חזור קטלוג.png" onclick="GoBack()">
                 <img id="ButtonHome" class="abs-btn" src="assets/כפתור בית קטלוג.png" onclick="GoHome()">
+ <img id="ButtonHome" class="abs-btn" src="assets/כפתור בית קטלוג.png" onclick="GoHome()">
+
+
+
+
 
 <!--   דרג אוגדה -->
  <img id="ButtonYasar" class="abs-btn" src="assets/כפתור יסר.png" onclick="changeYasar()">
