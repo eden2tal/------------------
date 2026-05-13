@@ -62,7 +62,7 @@
 
 #ButtonHome    { width: 10.67%; top: 5%; right: 20%; }
 
-
+#Kredit { width: 35%; top: 0%; right: 2%; }
 #ButtonMaclolMenala { width: 53.33%; top: 30%; left: 25%; transform: translateX(-50%); }
 #ButtonTene         { width: 53.33%; top: 30%; left: 75%; transform: translateX(-50%); }
 #ButtonHaspaka      { width: 53.33%; top: 40%; left: 25%; transform: translateX(-50%); }
@@ -399,6 +399,9 @@ changeImage()
         function hideAll() {
             const btns = document.querySelectorAll('.abs-btn');
             btns.forEach(b => b.style.display = 'none');
+             document.getElementById('Kredit').style.display = "block";
+
+            
         }
         setTimeout(function() {
             document.body.style.backgroundImage ="url('assets/עמוד חזון מלי.png')";
@@ -6725,6 +6728,9 @@ function changeHistlamatHapalatAsPom() {
     <img id="ButtonEimonCevetPaltach" class="abs-btn" src="assets/אימון הקמת צוות פלתצ כפתור.png" onclick="changeEimonCevetPaltach()">
   <img id="ButtonEimonPaltacMecin" class="abs-btn" src="assets/אימון פלתצ מכין כפתור.png" onclick="changeEimonPaltacMecin()">
   <img id="ButtonBuchanRama" class="abs-btn" src="assets/בוחן רמה כפתור.png" onclick="changeBuchanRama()">
+
+
+  <img id="Kredit" class="abs-btn" src="assets/קרדיט פלא מלי.png" style="display: block;" >
 
  </div>
 
